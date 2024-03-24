@@ -1,0 +1,36 @@
+{% extends 'main.html' %}
+
+{% block content %}
+
+<style>
+    .container{
+        display: grid;
+        grid-template-columns: 1fr 1fr 1fr 1fr;
+    }
+</style>
+
+<body>
+    <div class="container">
+        <div>
+            <form method="POST">
+                {% csrf_token %}
+                <button type="submit">Add New Task</button>
+            </form>
+        </div>
+
+
+        <div>
+            <h2>To Do</h2>
+        </div>
+
+        <div>
+            <h2>In progress</h2>
+        </div>
+
+        <div>
+            <h2>Completed</h2>
+        </div>
+    </div>
+</body>
+
+{% endblock %}
